@@ -1,4 +1,6 @@
+use std::io;
 #[derive(Debug)]
+
 
 struct Rectangle {
     width: u32,
@@ -48,4 +50,8 @@ fn main() {
     let p2 = Point { x: -3, y: 18 };
 
     println!("Distance between p1 and p2: {}", p1.distance(&p2));
+
+
+    // pause the program so it doesn't exit immediately
+    io::stdin().read_line(&mut String::new()).unwrap(); 
 }
